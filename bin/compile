@@ -58,7 +58,7 @@ fi
 
 echo "Building app" | arrow
 cd $BUILD_DIR
-$NIMBLE_BIN build --accept
-
-$NIMBLE_BIN c --hint[Processing]:off -d:danger -r tools/gencss
-$NIMBLE_BIN c --hint[Processing]:off -d:danger -r tools/rendermd
+$NIMBLE_BIN install -y --depsOnly
+$NIMBLE_BIN build -d:danger -d:lto -d:strip --accept
+$NIMBLE_BIN scss
+$NIMBLE_BIN md
