@@ -60,5 +60,5 @@ echo "Building app" | arrow
 cd $BUILD_DIR
 $NIMBLE_BIN build --accept
 
-$NIM_BIN c --hint[Processing]:off -d:danger -r tools/gencss
-$NIM_BIN c --hint[Processing]:off -d:danger -r tools/rendermd
+$NIMBLE_BIN c --hint[Processing]:off -d:danger -r tools/gencss
+$NIMBLE_BIN c --hint[Processing]:off -d:danger -r tools/rendermd
