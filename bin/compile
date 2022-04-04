@@ -53,11 +53,12 @@ if [ ! -x $NIMBLE_BIN ]; then
     git clone --depth 1 $nimble_repo $CACHE_DIR/nimble
     cd $CACHE_DIR/nimble
     $NIM_BIN c -r src/nimble install -y
-    $NIM_BIN c --hint[Processing]:off -d:danger -r tools/gencss
-    $NIM_BIN c --hint[Processing]:off -d:danger -r tools/rendermd
 fi
 
 
 echo "Building app" | arrow
 cd $BUILD_DIR
 $NIMBLE_BIN build --accept
+
+$NIM_BIN c --hint[Processing]:off -d:danger -r tools/gencss
+$NIM_BIN c --hint[Processing]:off -d:danger -r tools/rendermd
