@@ -58,7 +58,7 @@ fi
 
 echo "Building app" | arrow
 cd $BUILD_DIR
-$NIMBLE_BIN install -y --depsOnly
-$NIMBLE_BIN build -d:danger -d:lto -d:strip --accept
-$NIMBLE_BIN scss
-$NIMBLE_BIN md
+#$NIMBLE_BIN install -y --depsOnly
+$NIMBLE_BIN build --accept
+#$NIMBLE_BIN scss
+#$NIMBLE_BIN md
